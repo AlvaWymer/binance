@@ -1,0 +1,36 @@
+server:
+  port: 8090
+  shutdown: graceful #优雅关闭，默认是 IMMEDIATE(立即关闭)
+  # Enable response compression
+  compression:
+    enabled: true
+    mime-types: text/html,text/xml,text/plain,text/css,text/javascript,application/javascript
+
+Logging:
+  level:
+    org.springframework: DEBUG
+
+spring:
+  application:
+    name: binance
+  messages:
+    encoding: ISO-8859-1
+
+  servlet:
+    multipart:
+      max-file-size: 100MB # Max file size. Values can use the suffixed "MB" or "KB" to indicate a Megabyte or Kilobyte size.
+      max-request-size: 100MB # Max request size. Values can use the suffixed "MB" or "KB" to indicate a Megabyte or Kilobyte size.
+
+
+  # 默认环境下禁用flyway
+#  flyway:
+#    enabled: false
+
+logging:
+  level:
+    org.springframework: INFO
+    org.hibernate: WARN
+    org.apache.cxf: WARN
+    org.apache.commons.jexl2.JexlEngine: ERROR
+
+
