@@ -22,7 +22,7 @@ public class MySqrt {
 
     // 牛顿迭代法
     public static float sqrts(float enterNumber) {
-        float res = (float) (Math.round((enterNumber + baseNumber / enterNumber) / 2 * 1000)) / 1000;
+        float res = (Math.round((enterNumber + baseNumber / enterNumber) / 2 * 1000)) / 1000;
         if (res == enterNumber) {
             return enterNumber;
         } else {
